@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for form icons */
+        .input-group-text {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Styling for error messages */
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        /* Hide error messages initially */
+        .error-message.hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="myForm" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                            <div class="invalid-feedback">
+                                Please supply your first name
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                            <div class="invalid-feedback">
+                                Please supply your last name
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Please supply your email address
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone #</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                            <div class="invalid-feedback">
+                                Please supply your phone number
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-home"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="address" name="address" required>
+                            <div class="invalid-feedback">
+                                Please supply your street address
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-city"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="city" name="city" required>
+                            <div class="invalid-feedback">
+                                Please supply your city
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select class="form-control" id="state" name="state" required>
+                            <option value="">Please select your state</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            </select>
+                        <div class="invalid-feedback">
+                            Please select your state
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Do you have hosting?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="hosting" id="yesHosting" value="yes" required>
+                            <label class="form-check-label" for="yesHosting">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="hosting" id="noHosting" value="no">
+                            <label class="form-check-label" for="noHosting">
+                                No
+                            </label>
+                        </div>
+                        <div class="invalid-feedback">
+                            Please select hosting option
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Project Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+    <script>
+        // JavaScript for form validation
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>

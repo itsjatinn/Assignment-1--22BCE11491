@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethnus Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Custom styles for the layout */
+        body {
+            padding-top: 70px; /* Adjust padding for fixed navbar */
+        }
+
+        .navbar {
+            background-color: #00acee; /* Light blue navbar background */
+            border: none; /* Remove default border */
+        }
+
+        .navbar-brand {
+            color: white !important; /* White text for brand */
+        }
+
+        .navbar-nav>li>a {
+            color: white !important; /* White text for navbar links */
+        }
+
+        .sidebar {
+            background-color: #ddd; /* Light gray sidebar background */
+            padding: 20px;
+            height: 100%; /* Make sure it takes full height */
+            position: fixed; /* Fixed position */
+            top: 70px; /* Adjust top to account for navbar */
+            bottom: 0px; /* Extend to bottom */
+            overflow-y: auto; /* Add scroll if needed */
+        }
+
+        .content {
+            padding: 20px;
+            margin-left: 220px; /* Adjust margin to account for sidebar */
+        }
+
+        .right-column {
+            background-color: #999; /* Gray background for right column */
+            color: white;
+            padding: 20px;
+        }
+
+        /* Small devices (tablets and smaller) */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: relative; /* Remove fixed positioning */
+                height: auto;
+                width: 100%;
+                margin-bottom: 20px;
+                top: auto; /* remove top offset */
+            }
+
+            .content {
+                margin-left: 0; /* Remove left margin */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Ethnus layout</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">SIGNUP</a></li>
+                <li><a href="#">LOGIN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                </div>
+            <div class="col-sm-9 col-md-7 content">
+                Write your content here
+            </div>
+            <div class="col-sm-12 col-md-3 right-column">
+                This is
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

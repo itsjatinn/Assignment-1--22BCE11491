@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .pricing-table .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .pricing-table .card-body {
+            padding: 1.5rem;
+        }
+
+        .pricing-table .card-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-table .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-table ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-table li {
+            margin-bottom: 0.75rem;
+        }
+
+        .pricing-table .btn {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .pricing-table .card.enterprise {
+            transform: scale(1.05);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer .container {
+            max-width: 960px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer li {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center mb-4">
+                <h1>Pricing</h1>
+                <p class="lead">Quickly build an effective pricing table for your potential customers with this
+                    Bootstrap example. It's built with default Bootstrap components and utilities
+                    with little customization.</p>
+            </div>
+        </div>
+        <div class="row pricing-table">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Free</h5>
+                        <div class="price">$0/mo</div>
+                        <ul>
+                            <li>10 users included</li>
+                            <li>2 GB of storage</li>
+                            <li>Email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Sign up for free</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pro</h5>
+                        <div class="price">$15/mo</div>
+                        <ul>
+                            <li>20 users included</li>
+                            <li>10 GB of storage</li>
+                            <li>Priority email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card enterprise">
+                    <div class="card-body">
+                        <h5 class="card-title">Enterprise</h5>
+                        <div class="price">$29/mo</div>
+                        <ul>
+                            <li>30 users included</li>
+                            <li>15 GB of storage</li>
+                            <li>Phone and email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Cool stuff</a></li>
+                        <li><a href="#">Random feature</a></li>
+                        <li><a href="#">Team feature</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Resource</a></li>
+                        <li><a href="#">Resource name</a></li>
+                        <li><a href="#">Another resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p>&copy; 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

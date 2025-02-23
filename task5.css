@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(238, 232, 170); /* Light yellow background */
+    font-family: "Times New Roman", Times, serif; /* Serif font */
+    margin: 20px; /* Add some margin to the body */
+  }
+  
+  h1 {
+    color: rgb(153, 0, 153); /* Purple heading */
+    text-align: center; /* Center the heading */
+    font-size: 2em; /* Adjust font size as needed */
+  }.nav {
+    background-color: rgb(255, 250, 205); /* Light yellow for navigation */
+    border: 2px solid; /* Add a border */
+    padding: 10px; /* Add padding */
+    margin-bottom: 20px; /* Add margin below navigation */
+  }.nav a {
+    display: block; /* Make links stack vertically */
+    color: rgb(102, 51, 0); /* Brown link color */
+    text-decoration: none; /* Remove underlines */
+    padding: 5px; /* Add padding to links */
+  }.nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }.nav-bullet {
+    width: 10px; /* Adjust bullet width */
+    height: 10px; /* Adjust bullet height */
+    background-color: black; /* Black bullet color */
+    display: inline-block; /* Make it sit inline with the text */
+    margin-right: 5px; /* Add space between bullet and text */
+  }.content {
+    background-color: rgb(255, 250, 205); /* Light yellow for content */
+    border: 2px solid; /* Add a border */
+    padding: 20px; /* Add padding */
+  }.date {
+    text-align: right; /* Align date to the right */
+    font-style: italic; /* Italicize the date */
+    margin-top: 20px; /* Add top margin */
+  }

@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  /* Vertical Navigation Bar */
+  .vertical-nav {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    float: left; /* Make it float to the left */
+    margin-right: 20px; /* Add some space to the right */
+  }
+  
+  .vertical-nav a {
+    display: block; /* Make links stack vertically */
+    color: blue;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .vertical-nav a:hover {
+    background-color: #ddd;
+  }
+  
+  .vertical-nav a.active {
+    background-color: orange;
+    color: white;
+  }
+  
+  /* Horizontal Navigation Bar */
+  .horizontal-nav {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden; /* Clear floats */
+  }
+  
+  .horizontal-nav a {
+    float: left; /* Make links float horizontally */
+    color: blue;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .horizontal-nav a:hover {
+    background-color: #ddd;
+  }
+  
+  .horizontal-nav a.active {
+    background-color: #4CAF50; /* Green for active */
+    color: white;
+  }
+  
+  /* Optional: Style the container for both navbars */
+  .nav-container {
+    width: 600px; /* Adjust as needed */
+    margin: 20px auto;
+    overflow: hidden; /* To clear floats within the container */
+  }
